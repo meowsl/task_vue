@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Test</title>
+        <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="static/css/styles.css">
+    </head>
+<body>
+
+<div class="container" style="margin:3% 10%" id="app">
+    <header>
+        <div class="logo">
+            <img src="static/images/logo.png" alt="">
+        </div>
+        <form class="art-control" v-on:submit.prevent="getFormValues" action="#">
+            <input type="text" v-model="newtitle" placeholder="Введите название статьи">
+            <input type="text" v-model="newbody" placeholder="Введите основной текст">
+            <button type="button" class="add-art" @click="buttonClick" style="background-color: #5B98E3; font-size: 20px; font-weight: 700; color: #FFFFFF">Добавить новую статью</button>
+        </form>
+        
+    </header>
+        <div class="menu-block" style="margin-top:3%;">
+            <p class="menu-header" style="font-size: 25px; font-weight: 700; color: #FFFFFF">Статьи</p>
+            <div class="art-menu">
+                <div class="main-card" v-for="item in displayedPosts">
+                    <div class="card">
+                        <div class="card-body">
+                            <p class="card-head" style="font-weight: 500;">{{ item.title }}</p>
+                            <p class="card-text" style="font-weight: 400; font-size: 13px; color: #555555"> {{ item.body }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="pagination">
+            <button type="button" class="btn" v-if="page != 1" @click="page--"> << </button>
+            <button type="button" class="btn" v-for="pageNumber in pages.slice(page-1, page+5)" @click="page = pageNumber"> {{pageNumber}} </button>
+            <button type="button" @click="page++" v-if="page < pages.length" class="btn btn-sm btn-outline-secondary"> >> </button>
+        </div>
+    </div>  
+    <script src="static/js/pag.js"></script>
+</body>
+</html>

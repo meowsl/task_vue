@@ -1,0 +1,73 @@
+body{
+    height: 100vh;
+    background-image: url(/static/images/reg.png);
+    background-size: cover;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.art-control{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top:3%;
+}
+
+.art-menu{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+}
+
+.main-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    height: 222px;
+    width: 350px;
+    background-color: white;
+    margin-top: 20px;
+    border-radius: 15px;
+}
+.card-body{
+    margin:0 20px 0 15px;
+}
+
+input, .add-art{
+    width:350px;
+    height: 70px;
+    border: none;
+    border-radius: 10px;
+}
+input{
+    text-align: left;
+}
+input::placeholder{
+    margin-left: 20px;
+    padding-left: 10px;
+    font-weight: 400;
+    font-size: 18px;
+}
+.btn{
+    font-family: 'Montserrat', sans-serif;
+    background-color: #B0B4FF;
+    width: 30px;
+    height: 35px;
+    margin: 0 3px;
+    font-size: 12px;
+    font-weight: 500;
+    color: black;
+    border: none;
+    border-radius: 5px;
+}
+.pagination{
+    margin-top: 3%;
+}
