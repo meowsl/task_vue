@@ -39,7 +39,7 @@
         </div>
         <div class="pagination">
             <button type="button" class="btn" v-if="page != 1" @click="page--"> << </button>
-            <button type="button" class="btn" v-for="pageNumber in pages.slice(page-1, page+5)" @click="page = pageNumber"> {{pageNumber}} </button>
+            <button type="button" class="btn" v-for="pageNumber in pages" @click="page = pageNumber"> {{pageNumber}} </button>
             <button type="button" @click="page++" v-if="page < pages.length" class="btn btn-sm btn-outline-secondary"> >> </button>
         </div>
     </div>  

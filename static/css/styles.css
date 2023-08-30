@@ -71,3 +71,7 @@ input::placeholder{
 .pagination{
     margin-top: 3%;
 }
+.hidden{
+    display: none;
+    visibility: hidden;
+}
