@@ -5,7 +5,7 @@ body{
     font-family: 'Montserrat', sans-serif;
 }
 
-.art-control{
+.articles-control{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -13,7 +13,7 @@ body{
     margin-top:3%;
 }
 
-.art-menu{
+.articles-menu{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -41,7 +41,7 @@ body{
     margin:0 20px 0 15px;
 }
 
-input, .add-art{
+input, .articles-add__button{
     width:350px;
     height: 70px;
     border: none;
@@ -56,7 +56,7 @@ input::placeholder{
     font-weight: 400;
     font-size: 18px;
 }
-.btn{
+.pagination-button{
     font-family: 'Montserrat', sans-serif;
     background-color: #B0B4FF;
     width: 30px;
